@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+/* el alto de la pantalla es mayor al ancho */
+@media (orientation: portrait) {
+	.box{
+	width:30%;
+	height:100%;
+	border:1px solid red;
+	margin: 0.5%;
+   }  
+   
+   ul{
+	   display:flex;
+	   flex-direction:column;
+   }
+}
+
+/* el ancho de la pantalla es mayor al alto */
+@media (orientation: landscape ) {
+  .box{
+	width:30%;
+	height:100%;
+	border:2px solid blue;
+	margin: 3px;
+   }
+   
+   ul{
+	   display:flex;
+	   flex-direction:row;
+   }
+}
+
+/*	Comunes */
+ul{
+	list-style-type:none;
+}
+nav a{
+	display: block;
+	background-color:LightGray;
+	text-align: center;
+	text-decoration: none;
+}
+
+aside div{
+	border:1px solid black;
+}
+
+article{	
+	grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+	height: 100%;	
+}
+
+aside{
+	grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+	
+		
+	height: 100%;
+	
+	grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+	display:grid;
+}
+
+footer{
+	grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+	height: 100%;
+	margin-top:1%;
+}
+
+section {
+	grid-template-columns: 70% 30%;
+    grid-template-rows: 90% 10%;
+	display:grid;
+}
+
+nav li { flex-grow: 1; }
+
+img,.card a {height: 100%;width:100%;}
